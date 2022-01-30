@@ -7,7 +7,7 @@ const FeatureScope = require('./scope/FeatureScope');
 const BrowserScope = require('./scope/BrowserScope');
 const { createFolder } = require('./util/FileSystem');
 
-// Process .env file
+// Process .env.development file
 require('dotenv').config()
 
 // Timeout, in milliseconds, for puppeteer actions
