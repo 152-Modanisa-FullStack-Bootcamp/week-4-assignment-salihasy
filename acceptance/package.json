@@ -5,6 +5,7 @@
     "/features"
   ],
   "scripts": {
+    "work": "npx cucumber-js --format progress --tags @work",
     "start": "npx cucumber-js --format progress"
   },
   "dependencies": {
@@ -13,10 +14,16 @@
     "cucumber": "^6.0.5",
     "dotenv": "^8.6.0",
     "pixelmatch": "^5.2.1",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^9.1.1"
   },
   "puppeteerOptions": {
     "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
-    "PUPPETEER_EXECUTABLE_PATH": "which chromium"
+    "PUPPETEER_EXECUTABLE_PATH": "/usr/local/bin/chromium",
+    "headless": true,
+    "sloMo": 250,
+    "defaultViewport": {
+      "width": 1000,
+      "height": 1000
+    }
   }
 }
