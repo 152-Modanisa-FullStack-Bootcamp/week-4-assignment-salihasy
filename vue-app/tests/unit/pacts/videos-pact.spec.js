@@ -13,7 +13,6 @@ pactWith({
             api = new API(provider.mockService.baseUrl)
         })
         test('get video list', async () => {
-            console.log(provider)
             await provider.addInteraction({
                 state: 'get video list successfully',
                 uponReceiving: 'a request not empty for video list',

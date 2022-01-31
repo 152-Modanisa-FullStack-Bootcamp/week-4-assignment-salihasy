@@ -1,3 +1,6 @@
+# YOUTUBE ASSİGNMENT WİTH ATDD/TDD CYCLE
+
+
 ```gherkin
 Feature: Video Site Project
   As Product Owner I want to surf on our video site project
@@ -21,13 +24,70 @@ Feature: Video Site Project
     Then User should see hovered image
 ```
 
-# Installation and Instructions:
-    
-- There are two types of project (vue and acceptance) so **you need to install node_modules using yarn or npm on both projects.**
-    
-- We expect you to do ATDD cycle video site project. **You don't need to
-implement everything in the video side project.** You are supposed to apply only necessary thing to implement 
-above features. 
+<br />
 
-- **You are supposed to write cdc pact test for the cases you get data from the backend. 
-Only getting videos endpoint.**
+## **TITLES**
+
+* [Description](#description)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+<br />
+
+## Description
+
+<br />
+
+Below is results of our acceptence tests
+
+![HomePage](vue-app/src/assets/acceptence-tests.png)
+
+<br />
+
+Below is results of our unit tests and pact test.
+
+![FavoritesPage](vue-app/src/assets/unit-tests.png)
+
+<br />
+
+<br />
+
+## Technologies
+---
+Project is created with:
+* **Vue**
+* **Puppeteer**
+* **Jest**
+* **Cucumber**
+* **Javascript**
+* **HTML5**
+* **CSS3**
+
+
+<br />
+
+## Setup And Run
+---
+
+For run acceptence tests;
+
+```
+$ yarn install
+$ yarn start
+```
+
+For run unit tests
+
+```
+$ yarn install
+$ yarn test:unit
+```
+
+For run only pact test
+
+```
+$ yarn install
+$ yarn test:unit pacts/
+```
+
+<br />

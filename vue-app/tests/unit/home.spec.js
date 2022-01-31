@@ -9,25 +9,26 @@ jest.mock("@/api")
 
 describe("Home.vue",() => {
 
+    // function for mount
     function mountComponent() {
-        // created local vue instance
         return shallowMount(Home, {
         })
-
-
     }
 
+    // if the component is not found this will return false, and test will fail
     it("home component should exists", () => {
           const wrapper = mountComponent()
           expect(wrapper.exists()).toBeTruthy()
       })
 
+    // if video component is not found this will return false, and test will fail
     it("video component should exists", () => {
         const wrapper = mountComponent()
         expect(wrapper.findComponent(Video)).toBeTruthy()
     })
 
       it("video count check", async () => {
+          // this created for get videos
           const mockResponse = [
               {
                   "id": 1,
@@ -49,9 +50,11 @@ describe("Home.vue",() => {
               }
           ]
 
+          // We give the mockResponse that we created to the resolve value of getVideoList of the API.
           API.getVideoList.mockResolvedValue(mockResponse)
           const wrapper = mountComponent()
           await flushPromises()
+          // Since we are mocking it, wrapper.vm.$data.videos.length value will be 3
           expect(wrapper.vm.$data.videos.length).toEqual(mockResponse.length)
       })
 

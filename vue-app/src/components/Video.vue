@@ -1,12 +1,14 @@
 <template>
   <div class="video-container">
+    <router-link id="my-router-link" :to="{ path: '/watch', query: {id: video.id} }">
       <img id="video-image"
            @mouseover="isHover=true" @mouseleave="isHover=false"
            :src="isHover ? video.hoverImage : video.coverImage"/>
+    </router-link>
     <div class="footer-of-video">
       <img class="own-image" :src="video.ownerImage"/>
       <div class="information">
-        <span id="title"> <b> {{video.title}} </b></span>
+        <span> <b  id="title"> {{video.title}} </b> </span>
         <span class="grey-font"> {{video.ownerName}} </span>
         <span class="grey-font"> {{video.viewCount}} views • {{video.publishDateInMonth}} months ago</span>
       </div>

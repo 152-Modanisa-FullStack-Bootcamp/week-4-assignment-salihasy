@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 import Video from "@/components/Video";
 import API from "@/api";
@@ -21,7 +20,6 @@ export default {
   async created() {
     try {
       this.videos = await API.getVideoList()
-      console.log(this.videos)
     } catch (e) {
       console.error(e)
     }

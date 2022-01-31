@@ -16,7 +16,6 @@
     "jest": "^27.4.7",
     "jest-pact": "^0.9.1",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -27,6 +26,7 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
+    "vue-router": "^3.5.3",
     "vue-template-compiler": "^2.6.11"
   }
 }

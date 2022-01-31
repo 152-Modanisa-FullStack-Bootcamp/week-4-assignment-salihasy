@@ -8,3 +8,13 @@ Feature: Video Site Project
       | Vue.js Course for Beginners [2021 Tutorial] |
       | Vue JS Crash Course                         |
       | ue 3 - What's New? What Changed?            |
+
+  Scenario: User should navigate to watch page on click to video
+    Given that User is on Video Site Project's HomePage
+    When User clicks "Vue JS Crash Course" video
+    Then User should see watch url correctly
+
+  Scenario: User should see video image change on hover
+    Given that User is on Video Site Project's HomePage
+    When User hovers "Vue.js Explained in 100 Seconds" video
+    Then User should see hovered image
